@@ -1,27 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
-  <body>
-    <h1>Hello World!, we are know developers</h1>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<head>
+  <meta charset="UTF-8">
 
-    <!--
 
-    Hello Camper!
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fork Me! FCC: Test Suite Template</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-    For now, the test suite only works in Chrome!
-    Please read the README below in the JS Editor before beginning.
-    Feel free to delete this message once you have read it.
-    Good luck and Happy Coding!
+<body>
 
-    - The freeCodeCamp Team
+  <header id="header">
+    <div class="logo">
+      <img id="header-img" src="static/Orignal.png" alt="Header Image">
+    </div>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="#header" class="nav-link">Features</a></li>
+        <li><a href="#main" class="nav-link">How it works </a></li>
+        <li><a href="#footer" class="nav-link">Pricings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
 
-    -->
-    <script  src="js/index.js"></script>
-  </body>
+    <h2>Really Great Guitars</h2>
+
+    <form action="https://www.freecodecamp.com/email-submit" id="form" method="POST">
+      <input name="email" type="email" id="email" placeholder="Type You Email">
+      <input type="submit" id="submit" value="ORDER NOW">
+    </form>
+
+
+    <video controls id="video">
+      <source src="static/Guitar.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <h3>Classic Guitar</h3>
+        </div>
+
+
+        <h2>$100</h2>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <a href="#"> BUY NOW! </a>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Electric Guitar</h3>
+        </div>
+        <h2>$200</h2>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <a href="#"> BUY NOW! </a>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>ElectroAcuostic Guitar</h3>
+        </div>
+        <h2>$450</h2>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <a href="#"> BUY NOW! </a>
+      </div>
+    </div>
+
+
+  </main>
+  <footer id="footer">
+    <ul>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p>Copyright 2016, Orignal Guitars</p>
+  </footer>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
