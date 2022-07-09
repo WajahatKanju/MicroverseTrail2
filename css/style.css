@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     max-height: 100%;
     position: relative;
     background-color: #eee;
@@ -32,7 +35,7 @@ header {
     transform: translateX(10%);
 }
 
-#header-img{
+#header-img {
     width: 70%;
     height: 70%;
 }
@@ -41,25 +44,26 @@ header {
     width: 50vw;
 }
 
-#nav-bar > ul {
+#nav-bar>ul {
     display: flex;
     justify-content: space-around;
 }
-#nav-bar > ul > li {
+
+#nav-bar>ul>li {
     list-style-type: none;
 }
 
-#nav-bar > ul > li > a {
+#nav-bar>ul>li>a {
     text-decoration: none;
     color: #111;
+    font-size: 1.25rem;
+    transition: 0.3s;
 }
 
-
-@media screen  and (max-width: 480px){
-    header {
-        background-color: red;
-    }
+#nav-bar>ul>li>a:hover {
+    color: crimson;
 }
+
 
 #main {
     margin: 5rem auto;
@@ -69,11 +73,52 @@ header {
     align-items: center;
 }
 
-#main > * {
-    margin: 1rem;
+#main>* {
+    margin: 2.5rem;
+
 }
+
+.features {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    font-size: 1.5;
+}
+
+.features .feature {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+.features .feature .icon {
+    text-align: center;
+    font-size: 5rem;
+    width: 30%;
+    color: crimson;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.features .feature .icon:hover {
+    transform: scale(1.2);
+}
+
+
+.features .feature .description {
+    padding: 2rem 1rem;
+    width: 70%;
+}
+
+.features .feature .description h2 {
+    color: crimson;
+    margin-bottom: 0.2rem;
+}
+
 #video {
-    width: 80%;
+    max-width: 80%;
     height: 100%;
 }
 
@@ -96,11 +141,11 @@ header {
     border: 2px solid red;
 }
 
-#form > * {
+#form>* {
     margin: 0.5rem;
 }
 
-#submit { 
+#submit {
     font-size: 1.2rem;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -110,18 +155,18 @@ header {
 
 #submit:hover {
     background-color: orange;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 
 
 .cards {
-    width: 80%;
+    max-width: 100%;
     display: flex;
     justify-content: space-around;
-    
+
 }
 
-.card { 
+.card {
     display: block;
     min-width: 25vw;
     border: 2px solid #111;
@@ -136,7 +181,9 @@ header {
     width: 100%;
     text-align: center;
     font-weight: 300;
+    padding: 1rem 0;
 }
+
 .card a {
     display: block;
     text-decoration: none;
@@ -147,12 +194,111 @@ header {
     border-radius: 100x;
 }
 
+.card *~* {
+
+    margin-top: 1rem;
+}
+
 .card a:hover {
     background-color: orangered;
     transition: 0.8s ease;
 }
 
 #footer {
+    width: 100%;
     background-color: #ccc;
-  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 2rem;
+}
+
+#footer>* {
+    margin: 0.5rem;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+#footer ul li {
+    list-style-type: none;
+}
+
+#footer ul li a {
+    color: #111;
+    text-decoration: none;
+}
+
+#copyright {
+    color: #444;
+}
+
+
+
+
+@media screen and (min-width: 1366px) {
+    .card {
+        min-width: 20vw;
+    }
+}
+
+
+@media screen and (min-width: 1800px) {
+    .card {
+        min-width: 18vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    #nav-bar>ul>li>a {
+        font-size: 1rem;
+    }
+    #main>* {
+        margin: 2rem;
+    
+    }
+    .icon {
+        display: none;
+    }
+    .description > * {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .cards {
+        flex-direction: column;
+    }
+    .card{
+        min-width: 40vw;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    #nav-bar>ul>li>a {
+        font-size: 0.8rem;
+    }
+    #main>* {
+        margin: 1.5rem;
+    
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    #nav-bar>ul>li>a {
+        font-size: 0.8rem;
+    }
+    #main>* {
+        margin: 1rem;
+    
+    }
 }
